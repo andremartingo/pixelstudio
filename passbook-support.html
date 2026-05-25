@@ -1,0 +1,260 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg" href="assets/logo.svg" />
+    <title>Passbook Support - Martingo Studio</title>
+    <style>
+        :root {
+            --body-text-color: hsla(0, 0%, 100%, 0.72);
+            --card-background-color: hsla(0, 0%, 100%, 0.06);
+            --heading-text-color: #fff;
+            --store-button-color: hsla(0, 0%, 100%, 0.12);
+            --subdued-text: hsla(0, 0%, 100%, 0.45);
+            --background-color: #000;
+        }
+
+        html,
+        body {
+            padding: 0;
+            margin: 0;
+            min-height: 100%;
+            font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+                Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+            background: var(--background-color);
+            color: var(--body-text-color);
+        }
+
+        .main {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .gradient {
+            position: absolute;
+            width: 100%;
+            height: 50%;
+            object-fit: cover;
+        }
+
+        .layout__wrapper {
+            width: min(720px, calc(100% - 40px));
+            margin: 0 auto;
+            padding: 72px 0 48px;
+            z-index: 1;
+            flex: 1;
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--heading-text-color);
+            margin: 0 0 12px;
+            font-size: 42px;
+            line-height: 1.1;
+        }
+
+        p {
+            line-height: 1.55;
+            margin: 0;
+        }
+
+        a {
+            color: var(--heading-text-color);
+        }
+
+        .intro {
+            margin: 0 auto 28px;
+            max-width: 620px;
+        }
+
+        .contact-panel {
+            background: var(--card-background-color);
+            border: 1px solid var(--store-button-color);
+            border-radius: 8px;
+            padding: 22px;
+            margin-bottom: 24px;
+            text-align: left;
+        }
+
+        .contact-panel h2,
+        .faq h2 {
+            color: var(--heading-text-color);
+            font-size: 20px;
+            line-height: 1.2;
+            margin: 0 0 12px;
+        }
+
+        .email-button {
+            margin-top: 18px;
+            padding: 14px 22px;
+            background-color: var(--card-background-color);
+            color: var(--heading-text-color);
+            border: 1px solid var(--store-button-color);
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.2s ease;
+        }
+
+        .email-button:hover {
+            background-color: var(--store-button-color);
+            transform: translateY(-2px);
+        }
+
+        .faq {
+            text-align: left;
+        }
+
+        details {
+            background: var(--card-background-color);
+            border-radius: 8px;
+            margin-top: 10px;
+            overflow: hidden;
+        }
+
+        summary {
+            cursor: pointer;
+            color: var(--heading-text-color);
+            font-weight: 700;
+            padding: 16px;
+        }
+
+        details p {
+            padding: 0 16px 16px;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 1em;
+            color: var(--subdued-text);
+            position: relative;
+            z-index: 1;
+        }
+
+        .footer span,
+        .footer a {
+            color: var(--subdued-text);
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-links {
+            display: inline;
+        }
+
+        @media (max-width: 600px) {
+            .layout__wrapper {
+                width: min(100% - 28px, 720px);
+                padding-top: 48px;
+            }
+
+            h1 {
+                font-size: 34px;
+            }
+
+            .footer span {
+                display: block;
+                margin-bottom: 0.5em;
+            }
+
+            .footer-links {
+                display: block;
+                text-align: center;
+            }
+
+            .separator {
+                display: none !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <img class="gradient" src="assets/background.png" alt="Background Image" />
+        <img class="gradient" src="assets/gradient.png" alt="Gradient Overlay" />
+
+        <main class="layout__wrapper">
+            <h1>Passbook Support</h1>
+            <p class="intro">
+                Support for Passbook - Wallet Pass Creator, including help creating Wallet passes,
+                adding cards to Apple Wallet, restoring purchases, and reporting app issues.
+            </p>
+
+            <section class="contact-panel" aria-labelledby="contact-heading">
+                <h2 id="contact-heading">Contact Support</h2>
+                <p>
+                    For questions, bug reports, feature requests, or purchase support, email
+                    <a href="mailto:support@martingo.studio">support@martingo.studio</a>.
+                    Please include your device model, iOS version, Passbook app version, and screenshots
+                    or screen recordings when they help explain the issue.
+                </p>
+                <a href="mailto:support@martingo.studio?subject=Passbook%20Support%20Request" class="email-button">
+                    Email Passbook Support
+                </a>
+            </section>
+
+            <section class="faq" aria-labelledby="faq-heading">
+                <h2 id="faq-heading">Frequently Asked Questions</h2>
+
+                <details>
+                    <summary>How do I create a Wallet pass?</summary>
+                    <p>
+                        Open Passbook, choose a template, add the card details and barcode or QR code,
+                        then preview the pass. When it looks correct, use the in-app option to add it
+                        to Apple Wallet.
+                    </p>
+                </details>
+
+                <details>
+                    <summary>Why is my barcode not scanning?</summary>
+                    <p>
+                        Check that the barcode type matches the original card and that the code value was
+                        entered exactly. If a store still cannot scan it, contact support with the pass type,
+                        barcode format, and a screenshot.
+                    </p>
+                </details>
+
+                <details>
+                    <summary>How can I restore my purchase?</summary>
+                    <p>
+                        Sign in with the same Apple ID used for the original purchase, open the purchase
+                        screen in Passbook, and tap Restore Purchases. If access is not restored, contact
+                        support with your App Store receipt date and Apple ID region.
+                    </p>
+                </details>
+
+                <details>
+                    <summary>What should I include when reporting a problem?</summary>
+                    <p>
+                        Include the steps that led to the issue, what you expected to happen, what happened
+                        instead, your device model, iOS version, and Passbook app version. Do not send
+                        passwords, payment card numbers, or other sensitive information.
+                    </p>
+                </details>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <span>Copyright 2024 &copy; Martingo Studio</span>
+            <div class="footer-links">
+                <span class="separator">|</span>
+                <a href="mailto:support@martingo.studio" aria-label="Contact Us">Contact</a> |
+                <a href="privacy.html" aria-label="Privacy Policy">Privacy</a> |
+                <a href="terms.html" aria-label="Terms of Service">Terms</a>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
+
